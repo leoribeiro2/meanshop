@@ -5,7 +5,7 @@
     <div class="col-sm-6 col-md-4" ng-show="products.length < 1">
       No products to show.
     </div>
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-6 col-md-4" ng-repeat="product in products">
       <div class="thumbnail">
         <img src="http://placehold.it/300x200" alt="{{product.title}}">
         <div class="caption">
@@ -14,7 +14,9 @@
           <p>{{product.price | currency}}</p>
           <p>
             <a href="#" class="btn btn-primary" role="button">Buy</a>
-            <a ui-serf="viewProduct({id: product._id})" class="btn btn-default" role="button">Details</a>
+            <a ui-sref="products" role="button" class="btn btn-default">Back</a>
+            <a ui-sref="editProduct({id: product._id})" role="button" class="btn btn-default">Edit</a>
+            <a ng-click="deleteProduct()" class="btn btn-danger">Delete</a>
           </p>
         </div>
       </div>

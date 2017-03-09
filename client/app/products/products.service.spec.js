@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: products', function() {
+describe('Service: Product', function() {
   // load the service's module
   beforeEach(module('meanshopApp'));
 
@@ -11,6 +11,6 @@ describe('Service: products', function() {
   }));
 
   it('should do something', function() {
-    expect(!!products).to.be.true;
+    expect(!!Product).to.be.true;
   });
 });

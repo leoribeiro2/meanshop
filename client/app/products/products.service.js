@@ -1,5 +1,5 @@
 'use strict';
-const angular = require('angular');
+//const angular = require('angular');
 
 angular.module('meanshopApp')
   .factory('Product', function () {
@@ -29,7 +29,7 @@ angular.module('meanshopApp')
           if(product._id == params._id){
             console.log(product, index);
             exemple_products.splice(index, 1);
-            return
+            //return
           }
         });
       },
